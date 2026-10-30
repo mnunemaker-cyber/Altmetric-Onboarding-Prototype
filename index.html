@@ -1,0 +1,42 @@
+import React, { useState } from 'react';
+import { UnifiedNavbar } from './components/UnifiedNavbar';
+import { UnifiedOnboardingPage } from './components/UnifiedOnboardingPage';
+import { Footer } from './components/Footer';
+import { GitHubGuideModal } from './components/GitHubGuideModal';
+
+export default function App() {
+  const [gitHubModalOpen, setGitHubModalOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-[#2A265A] text-white flex flex-col font-sans selection:bg-[#F1860B] selection:text-white">
+      {/* Sticky Header with Smooth-Scroll Anchors & GitHub Trigger */}
+      <UnifiedNavbar onOpenGitHubGuide={() => setGitHubModalOpen(true)} />
+
+      {/* Main Single Scrolling Page (Combining the 3 Sites into One) */}
+      <main className="flex-1">
+        <UnifiedOnboardingPage />
+      </main>
+
+      {/* Footer */}
+      <Footer onSelectPage={(sectionId) => {
+        if (sectionId === 'champion-onboarding') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (sectionId === 'data-integrations') {
+          const el = document.getElementById('data-integrations');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else if (sectionId === 'badges') {
+          const el = document.getElementById('badges');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          setGitHubModalOpen(true);
+        }
+      }} />
+
+      {/* GitHub Upload Guide Modal */}
+      <GitHubGuideModal
+        isOpen={gitHubModalOpen}
+        onClose={() => setGitHubModalOpen(false)}
+      />
+    </div>
+  );
+}
