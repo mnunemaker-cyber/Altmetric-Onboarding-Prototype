@@ -1,0 +1,452 @@
+﻿ALTMETRIC CHAMPION ONBOARDING
+Status and Handover Document 
+________________
+1. Overview
+Three Google Sites pages have been built to support Altmetric Explorer institution champion onboarding. Pages are deployed by Program Managers to champions in place of or alongside kick-off meetings. Champions work through the page at their own pace and submit the required form(s) to initiate access and integration setup.
+
+
+Two of the three pages are optional: Page 1 is universal (sent to all champions), while Pages 2 and 3 are sent only when data integrations or badges are in scope for a given customer's contract.
+1.1 The three pages at a glance
+Editable Page
+	Public Page
+	Audience
+	Features
+	Page 1: Champion Onboarding
+	https://sites.google.com/digital-science.com/altmetricsubscriptiononboard/home 
+	All champions
+	Form-based (access setup form)
+	Page 2: Data Integrations
+	https://sites.google.com/digital-science.com/altmetricintegrations/home 
+	Champions with integration in contract
+	Tabbed info + branching form
+	Page 3: Badges
+	https://sites.google.com/digital-science.com/altmetricbadges/home 
+	Champions with badges in contract
+	Variant cards + form
+	1.2 How the pages are used
+Program Managers share the relevant page link(s) with new institution champions. Page 1 is always shared. Pages 2 and 3 are shared only when the relevant scope item (data integration or badges) is included in the customer's contract.
+
+
+Champions read through the page, prepare the required information, and submit the setup form to trigger configuration. The pages are designed to be self-sufficient — kickoff calls can be replaced using these forms..
+1.3 Design system
+All three pages use a consistent custom HTML embed design with the following elements:
+
+
+* Background: dark purple #2A265A
+* Card background: medium purple #353062
+* Inset/callout background: light purple #3F396A
+* Orange accent: #F1860B (used for section labels, action highlights)
+* Blue accent: #0693E3 (used for links and info elements)
+* Magenta accent: #931F6F
+* Green accent: #A2C61C
+* Font: Segoe UI (system stack)
+* iframe fix: html { background: #2A265A; } and body { display: table; width: 100%; } on every block
+
+
+The custom HTML is embedded directly inside Google Sites sections using the custom embed feature. No external hosting is required.
+
+
+________________
+
+
+2. Page Inventory
+2.1 Page 1 — Champion Onboarding (Universal)
+Audience: All institution champions. Sent by PMs: Always.
+
+
+Page structure
+
+
+Page 1 is built from seven sections, each containing one custom HTML embed or one Google Form embed:
+
+
+Block 1 — Hero header Branded hero banner with headline and intro copy. Sets context for the champion.
+
+
+Block 2 — Role cards Explains the champion role: what it involves, who uses the Explorer, and how the onboarding process works.
+
+
+Block 3 — Your Explorer instance Two-column card layout. Left card: what Digital Science sets up. Right card: what we need from the champion (access configuration and optional co-branding). Neutral info treatment, no action-required pill.
+
+
+Block 4 — Setting up access Three-column card layout for the three access methods (SSO, IP Range, Individual Accounts). Each card covers how the method works, best-fit scenarios, and what the champion needs to provide. Proxy access is presented as a callout below the cards rather than a fourth peer option, as proxy is an add-on to IP range access rather than a standalone method. A second callout handles the "not sure" case.
+
+
+Block 5 — Access setup form (embedded Google Form) Primary intake form. Captures all details needed to configure access. Branches by access method after Q5. See Section 3.1 for the full question inventory.
+
+
+Block 6 — Getting your research tracked Two-column card layout explaining how Altmetric tracking works and what identifiers are supported. Includes a link to the Altmetric support KB tracking category. Callout for champions whose contract includes a data integration.
+
+
+Block 7 — Next steps Four numbered steps covering the journey from form submission to user rollout, including the orientation session note (use cases to support@altmetric.com, minimum one week notice). Contact card with support@altmetric.com.
+
+
+Access setup form — summary
+
+
+Structure: 6 sections, ~22 questions. Branching after Q5 (access method). Proxy questions appear as a sub-branch within the IP Range section.
+
+
+Section
+	Content
+	Section 1
+	Your details (Q1-4)
+	Section 2
+	Access method (Q5, branches)
+	Section 3
+	SSO details (Q6-11)
+	Section 4
+	IP Range details (Q12-17, proxy sub-branch)
+	Section 5
+	Individual Accounts (Q18)
+	Section 6
+	Logo and confirmation (Q19-21)
+	
+
+Responses currently route to m.nunemaker@digital-science.com. Transfer to support@altmetric.com once the page is live.
+
+
+________________
+
+
+2.2 Page 2 — Data Integrations (Optional)
+Audience: Champions whose contract includes a data integration (Elements, Pure, OAI-PMH, or CSV). Sent by PMs: Only when a data integration is in scope. Not sent universally.
+
+
+Page structure
+
+
+Block 1 — Intro Explains why integrations exist: Altmetric tracks attention globally but does not know which outputs belong to the institution. Two-column cards: what a data integration does, and how to identify which type applies.
+
+
+Block 2 — Tabbed integration type cards Four tabs: Symplectic Elements, Pure, OAI-PMH, CSV. Champion selects the tab matching their contract. Each tab covers what the integration is, who needs to be involved, what to provide, caveats (self-hosted Elements config, Pure firewall, Haplo department limitation), and a link to the relevant implementation documentation.
+
+
+Documentation links by tab:
+
+
+* Elements: https://docs.altmetric.com/implementation/populating-data/#symplectic-elements
+* Pure: https://docs.altmetric.com/implementation/populating-data/#pure
+* OAI-PMH: https://docs.altmetric.com/implementation/populating-data/#harvesting-from-your-repository-oai-pmh-feed
+* CSV: https://docs.altmetric.com/implementation/populating-data/#send-your-publications-data-via-csv-spreadsheet
+
+
+Block 3 — Integration intake form (embedded Google Form) Single branching form. Branches by integration type after Q1 (type selection). Credentials are never collected in the form — champions are directed to share via Privnote to support@altmetric.com. See Section 3.2 for the full question inventory.
+
+
+Block 4 — Getting started callout Confirms that the Implementation Manager will be in touch to kick off the process. Notes that Elements, Pure, and OAI-PMH integrations run on staging first with a preview shared for approval. Contact: support@altmetric.com.
+
+
+Integration intake form — summary
+
+
+Structure: 7 sections. Branches after Q1 to one of four integration-type sections, then converges on confirmation.
+
+
+Section
+	Content
+	Section 1
+	Your details
+	Section 2
+	Integration type (branches)
+	Section 3
+	Elements details
+	Section 4
+	Pure details
+	Section 5
+	OAI-PMH details
+	Section 6
+	CSV details
+	Section 7
+	Confirmation
+	
+
+Credentials (API keys, endpoints) for Elements and Pure are shared via Privnote to support@altmetric.com outside the form. The form does not collect sensitive credentials.
+
+
+________________
+
+
+2.3 Page 3 — Badges (Optional)
+Audience: Champions whose contract includes Altmetric Badges. Sent by PMs: Only when badges are in scope. Not sent universally.
+
+
+Page structure
+
+
+Block 1 — Badges intro Explains what badges are, how they update automatically, and that embedding is a client action requiring the champion's web or repository team. Link to badge documentation: https://docs.altmetric.com/badges/.
+
+
+Block 2 — Badge variant cards Three-column layout. Order: Regular (unlocked), Customised, Limited (locked). Each card covers what the variant shows and what the champion needs to provide. Limited is presented last as it is infrequently sold. Callout at bottom handles the "not sure" case and confirms the default.
+
+
+Block 3 — Badges intake form (embedded Google Form) Branches by badge variant. Regular and Limited collect domain(s) and optional web/repository contact. Customised adds logo email confirmation and background colour hex code. See Section 3.3 for the full question inventory.
+
+
+Block 4 — What happens next Four steps: we configure, we share badge documentation, champion's team embeds the code, we verify. Notes that customised badges involve a dev team step and may take one to two weeks. Contact: support@altmetric.com.
+
+
+Badges intake form — summary
+
+
+Structure: 5 sections. Branches after Q1 (variant) to Regular, Customised, or Limited section, then converges on confirmation.
+
+
+Section
+	Content
+	Section 1
+	Your details
+	Section 2
+	Badge variant (branches)
+	Section 3
+	Regular badge details
+	Section 4
+	Customised badge details (+ logo + colour)
+	Section 5
+	Limited badge details
+	
+
+________________
+
+
+3. Form Question Inventories
+3.1 Altmetric Access Setup Form
+Embedded on: Page 1 (Block 5) Purpose: Primary access setup. Captures all information needed to configure access to the champion's Explorer instance. Structure: 6 sections, ~22 questions. Branching after Q5 (access method selection).
+
+
+Section 1 — Your details
+
+
+* Q1. Full name | Short answer | Required
+* Q2. Organisation name | Short answer | Required
+* Q3. Job title | Short answer | Required
+* Q4. Email address | Short answer | Required
+
+
+Section 2 — Access method
+
+
+Your contract specifies which access method applies to your organisation.
+
+
+* Q5. Which access method applies to your organisation? | Multiple choice | Required
+   * Options: Single Sign-On (SSO) / IP Range / Individual Accounts
+   * Branching: SSO → Section 3 | IP Range → Section 4 | Individual Accounts → Section 5. All paths end at Section 6.
+
+
+Section 3 — Single Sign-On details
+
+
+* Q6. Entity ID | Short answer | Optional — for federation members only
+   * Helper: For UK Access Management, InCommon, or SURFconext members
+* Q7. IdP Metadata XML file | Checkboxes | Required
+   * Options: I have emailed my IdP Metadata XML file to support@altmetric.com / We are a federation member and do not need to provide a metadata file
+* Q8. Email domain(s) | Paragraph | Required — one per line
+* Q9. IT contact name | Short answer | Required
+* Q10. IT contact email | Short answer | Required
+* Q11. Test account email | Short answer | Optional
+
+
+Section 4 — IP Range details
+
+
+* Q12. IP ranges | Paragraph | Required — CIDR format, one per line
+* Q13. IT contact name | Short answer | Required
+* Q14. IT contact email | Short answer | Required
+* Q15. Do your users access resources via a proxy server? | Multiple choice | Required — Yes / No / Not sure
+* Q16. Proxy software | Multiple choice | Required if Q15 = Yes — EZProxy / OpenAthens / Other
+* Q17. Proxy server IP address(es) | Short answer | Optional
+* Q18. Fully proxied Altmetric Explorer URL | Short answer | Optional
+
+
+Section 5 — Individual Accounts
+
+
+* Q19. User list | Checkboxes | Required — confirm CSV emailed to support@altmetric.com
+   * Template: https://drive.google.com/file/d/1iHdqBu4pSL3FK5SQWOthVhLFOUykIzlw/view
+
+
+Section 6 — Logo and confirmation
+
+
+* Q20. Institution logo | Checkboxes | Required — confirm logo emailed to support@altmetric.com or decline
+   * Logo spec: PNG, 300x80px, max 30KB
+* Q21. Anything else? | Paragraph | Optional
+* Q22. Confirmation | Checkboxes | Required — authorisation statement
+
+
+________________
+
+
+3.2 Altmetric Integrations Intake Form
+Embedded on: Page 2 (Block 3) Purpose: Collects non-sensitive integration setup details. Credentials are handled outside the form via Privnote. Structure: 7 sections. Branches after integration type question to Elements, Pure, OAI-PMH, or CSV section. All paths converge on confirmation.
+
+
+Section 1 — Your details
+
+
+* Q1. Full name | Short answer | Required
+* Q2. Organisation name | Short answer | Required
+* Q3. Job title | Short answer | Required
+* Q4. Email address | Short answer | Required
+
+
+Section 2 — Integration type
+
+
+* Q5. Which integration type applies? | Multiple choice | Required
+   * Options: Symplectic Elements / Pure / OAI-PMH / CSV
+   * Branching: each option routes to the corresponding section. All converge on Section 7 (Confirmation).
+
+
+Section 3 — Elements details
+
+
+* Q6. Self-hosted or Symplectic-hosted? | Multiple choice | Required
+* Q7. Elements version number | Short answer | Required
+* Q8. Elements administrator name | Short answer | Required
+* Q9. Elements administrator email | Short answer | Required
+* Q10. Import scope preference | Multiple choice | Required — all outputs / currently affiliated only / not sure
+* Q11. API credentials confirmation | Checkboxes | Required — confirm Privnote link sent to support@altmetric.com
+
+
+Section 4 — Pure details
+
+
+* Q12. Pure API endpoint URL | Short answer | Required
+* Q13. Pure administrator name | Short answer | Required
+* Q14. Pure administrator email | Short answer | Required
+* Q15. Import scope preference | Multiple choice | Required — all outputs / currently affiliated only / not sure
+* Q16. API credentials confirmation | Checkboxes | Required — confirm Privnote link sent to support@altmetric.com
+
+
+Section 5 — OAI-PMH details
+
+
+* Q17. Repository system | Multiple choice | Required — EPrints / DSpace / Esploro / Diva / Haplo / bepress / Other
+* Q18. OAI-PMH endpoint URL | Short answer | Required
+* Q19. Repository administrator name | Short answer | Required
+* Q20. Repository administrator email | Short answer | Required
+* Q21. Diva: department name remapping? | Multiple choice | Required — Yes / No / Not applicable
+* Q22. Diva: exclude student theses? | Multiple choice | Required — Yes / No / Not applicable
+
+
+Section 6 — CSV details
+
+
+* Q23. Documentation review confirmation | Checkboxes | Required — confirm reviewed docs
+* Q24. CSV administrator name | Short answer | Required
+* Q25. CSV administrator email | Short answer | Required
+* Q26. Review first CSV files? | Multiple choice | Required — Yes please / No, will upload directly
+
+
+Section 7 — Confirmation
+
+
+* Q27. Anything else? | Paragraph | Optional
+* Q28. Confirmation | Checkboxes | Required — authorisation statement
+
+
+________________
+
+
+3.3 Altmetric Badges Intake Form
+Embedded on: Page 3 (Block 3) Purpose: Collects badge configuration details including domains, logo, and colour preference for customised badges. Structure: 5 sections. Branches after badge variant question to Regular, Customised, or Limited section. All paths converge on confirmation.
+
+
+Section 1 — Your details
+
+
+* Q1. Full name | Short answer | Required
+* Q2. Organisation name | Short answer | Required
+* Q3. Job title | Short answer | Required
+* Q4. Email address | Short answer | Required
+
+
+Section 2 — Badge variant
+
+
+* Q5. Which badge variant is specified in your contract? | Multiple choice | Required
+   * Options: Regular (unlocked) / Customised / Limited (locked)
+   * Branching: Regular → Section 3 | Customised → Section 4 | Limited → Section 5. All converge on confirmation.
+
+
+Section 3 — Regular badge setup
+
+
+* Q6. Domain(s) where badges will be embedded | Paragraph | Required — one per line
+* Q7. Web/repository contact name | Short answer | Optional
+* Q8. Web/repository contact email | Short answer | Optional
+
+
+Section 4 — Customised badge setup
+
+
+* Q9. Domain(s) where badges will be embedded | Paragraph | Required
+* Q10. Logo confirmation | Checkboxes | Required — confirm logo emailed to support@altmetric.com
+   * Logo spec: PNG, 300x80px, max 30KB
+* Q11. Background colour (hex code) | Short answer | Required
+* Q12. Web/repository contact name | Short answer | Optional
+* Q13. Web/repository contact email | Short answer | Optional
+
+
+Section 5 — Limited badge setup
+
+
+* Q14. Domain(s) where badges will be embedded | Paragraph | Required
+* Q15. Web/repository contact name | Short answer | Optional
+* Q16. Web/repository contact email | Short answer | Optional
+
+
+Confirmation section
+
+
+* Q17. Anything else? | Paragraph | Optional
+* Q18. Confirmation | Checkboxes | Required — authorisation statement
+
+
+________________
+
+
+4. Known Issues and Flags
+4.1 Form response routing
+All three forms currently route responses to m.nunemaker@digital-science.com for the build and testing phase. Before the pages go live, response destination should be transferred to support@altmetric.com or a shared inbox as agreed with the Support team.
+
+
+________________
+
+
+5. Working With the Page Code
+5.1 How to access the HTML for any block
+1. Open the Edit URL for the relevant page (listed in Section 2 once confirmed).
+2. Click on any content block to select it.
+3. Click the pencil (edit) icon — for custom HTML blocks this opens the embed editor showing the raw HTML.
+4. Select all and copy.
+
+
+Each page has multiple separate embed blocks. Open each one individually. Block boundaries correspond to the section descriptions in Section 2.
+5.2 Making changes with Claude
+1. Open a Claude chat (claude.ai) in the Altmetric onboarding project.
+2. Paste in the HTML for the block you want to change.
+3. Describe what you want to update.
+4. Claude will return the updated HTML. Copy and paste it back into the Google Sites embed editor.
+5. Click Done, then Publish in Google Sites to make the change live.
+5.3 Tips
+* Change one block at a time rather than pasting all blocks into a single Claude message.
+* If making the same change across multiple pages (e.g. a support email update), do each block separately and check before moving on.
+* The iframe background fix must be present on every block: html { background: #2A265A; } and body { display: table; width: 100%; }. Do not remove these.
+* Always preview the page in Google Sites before publishing.
+
+
+________________
+
+
+6. Out of Scope and Next Steps
+6.1 Out of scope
+* Dimensions equivalent pages — documented separately (see Dimensions onboarding handover document).
+* Backend configuration — these pages capture what is collected from champions. What happens in DS systems after form submission is not documented here.
+6.2 Next steps
+* Transfer form response destinations from m.nunemaker@digital-science.com to support@altmetric.com before go-live.
+* Share with Program Management team for feedback, as with the Dimensions pack.
+6.3 Drive folder
+All related files are stored in the shared Drive folder.
